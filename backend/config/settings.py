@@ -29,7 +29,7 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://localhost:3000']
 
 # Authentication
 AUTH_USER_MODEL = "users.User"
@@ -70,7 +70,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR],
+        "DIRS": [BASE_DIR/"templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -86,7 +86,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_URLS_REGEX = r"^/api/.*$"
+#CORS_URLS_REGEX = r"^/api/.*$"
 CORS_ALLOWED_ORIGINS= [
     "http://localhost:3000"
 ]
