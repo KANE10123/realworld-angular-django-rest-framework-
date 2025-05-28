@@ -70,7 +70,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/"templates"],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -87,9 +87,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 CORS_ALLOW_ALL_ORIGINS = True
 #CORS_URLS_REGEX = r"^/api/.*$"
-CORS_ALLOWED_ORIGINS= [
-    "http://localhost:3000"
-]
+CORS_ALLOWED_ORIGINS= ["http://localhost:3000", 'localhost']
 
 
 # Database
